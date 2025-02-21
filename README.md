@@ -1,5 +1,6 @@
-# TranslatorArchitecture
+# TranslatorEngineering
 
+WORK IN PROGRESS, UPDATING FROM ARCHITECTURE TO ENGINEERING GROUP
 ## Process
 
 This repository tracks the decision making for the Translator architecture.
