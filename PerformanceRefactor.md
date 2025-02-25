@@ -9,7 +9,8 @@ The plan to to complete the refactoring by Feb 28, 2026.
 
 * We will create a shared platform for ARA implementation
 * The name of this platform is Shepherd
-* Shepherd will be implemented in python
+* The workflow core of Shepherd will be implemented in python
+* Individual Shepherd operations may vary in their implementation language or technology, though python is preferred
 * Shepherd will be implemented as a workflow engine with shared operation components
 * Technical decisions related to the implementation of workflows are explicitly outside the scope of this document
 * ARAs will maintain individual TRAPI endpoints addressable at individual URLs, even if the underlying implementation is shared.
@@ -17,6 +18,7 @@ The plan to to complete the refactoring by Feb 28, 2026.
 * ARS will continue to exist and does not require modifications based on the outlined plan for Shepherd.
 * It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possiblity.
 * Shepherd will access Translator knowledge providers via the Retriever interface.
+* ARAs can access ARA-specific data sources such as databases directly.
 
 ## KPS to Retriever / DogPark
 
