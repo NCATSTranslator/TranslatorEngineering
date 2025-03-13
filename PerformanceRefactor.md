@@ -16,7 +16,7 @@ The plan to to complete the refactoring by Feb 28, 2026.
 * ARAs will maintain individual TRAPI endpoints addressable at individual URLs, even if the underlying implementation is shared.
 * Best effort will be made to reimplement ARAGORN, BTE, and ARAX to Shepherd.
 * ARS will continue to exist and does not require modifications based on the outlined plan for Shepherd.
-* It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possiblity.
+* It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possibility.
 * Shepherd will access Translator knowledge providers via the Retriever interface.
 * ARAs can access ARA-specific data sources such as databases directly.
 
@@ -38,6 +38,6 @@ The plan to to complete the refactoring by Feb 28, 2026.
 
 * Several components do not contain edges, but only nodes. At present, these components include (but are not necessarily limited to) SRI Node Normalizer, KG2 Node Synonymizer, Node Annotator, and Name Resolver.
 * These components will agree on a common set of identifier equivalences to be used across all tools, and in the normalization of DogPark knowledge.
-* Node Normalizer will implement refactorings to reduce its cost and may reduce performance to acheive this goal
+* Node Normalizer will implement refactorings to reduce its cost and may reduce performance to achieve this goal
 * Node Normalizer will however still be used at query time to provide canonical identifiers for external API sources.
-* Translator will investiget the merger of any or all of these tools based upon their use in the proposed architecture, but this document does not specify any decision.
+* Translator will investigate the merger of any or all of these tools based upon their use in the proposed architecture, but this document does not specify any decision.
