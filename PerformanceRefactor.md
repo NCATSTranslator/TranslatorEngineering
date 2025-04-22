@@ -40,4 +40,4 @@ The plan to to complete the refactoring by Feb 28, 2026.
 * These components will agree on a common set of identifier equivalences to be used across all tools, and in the normalization of DogPark knowledge.
 * Node Normalizer will implement refactorings to reduce its cost and may reduce performance to acheive this goal
 * Node Normalizer will however still be used at query time to provide canonical identifiers for external API sources.
-* Translator will investiget the merger of any or all of these tools based upon their use in the proposed architecture, but this document does not specify any decision.
+* Translator will investigate the merger of any or all of these tools based upon their use in the proposed architecture, but this document does not specify any decision.
