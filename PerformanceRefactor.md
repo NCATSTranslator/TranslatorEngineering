@@ -16,7 +16,7 @@ The plan to to complete the refactoring by Feb 28, 2026.
 * ARAs will maintain individual TRAPI endpoints addressable at individual URLs, even if the underlying implementation is shared.
 * Best effort will be made to reimplement ARAGORN, BTE, and ARAX to Shepherd.
 * ARS will continue to exist and does not require modifications based on the outlined plan for Shepherd.
-* It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possiblity.
+* It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possibility.
 * Shepherd will access Translator knowledge providers via the Retriever interface.
 * ARAs can access ARA-specific data sources such as databases directly.
 
