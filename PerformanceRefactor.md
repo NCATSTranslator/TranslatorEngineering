@@ -1,9 +1,16 @@
 # Performance Refactor Proposal
 
-This document describes the proposed refactoring of Translator at the start of the Performance phase at a high level. This does not describe all details of the refactoring, which will be jointly developed over time through discussions and decisions in the relevant working groups.
+This document describes (at a high level) the proposed refactoring of Translator at the start of the Performance phase. This does not describe all details of the refactoring, which will be jointly developed over time through discussions and decisions in the relevant working groups.
 The goal of this document is to establish a broad agreed-upon framework into which those details will fit, and codify the discussions at the February 2025 Relay.
 
 The plan to to complete the refactoring by Feb 28, 2026.
+
+There are several advantages to the proposed refactoring:
+* Increased query speed achieved by careful and centralized implementation of the query interface.
+* Increased software maintenance achieved by the collection of common tasks into single units of code.
+* Increased evolution of the Translator system, similarly achieved by the collection of common tasks into single units of code.
+* Decreased testing and deployment costs acheived through simplificiation of the system and reduction in number of components.
+* Increased data quality acheived through common ingests.
 
 ## ARAs to Shepherd
 
@@ -19,15 +26,17 @@ The plan to to complete the refactoring by Feb 28, 2026.
 * It is possible to host non-Shepherd ARAs if desired and this PR does not exclude the possibility.
 * Shepherd will access Translator knowledge providers via the Retriever interface.
 * ARAs can access ARA-specific data sources such as databases directly.
+* Shepherd will pass the query to each ARA without modification.
 
 ## KPS to Retriever / DogPark
 
 * Translator will implement a common data platform called DogPark.
 * The details of DogPark implementation including data architecture, database implementation, tiers, or interfaces are outside the scope of this document.
-* DogPark will host all Translator Knowledge Providers (KPs), including providing access to external APIs.
+* DogPark will host all Translator Knowledge Providers (KPs).
 * Translator will implement a query interface to DogPark called Retriever.
 * Retriever will implement at least an async TRAPI interface, and may develop further interfaces in the future.
 * The TRAPI Interface will respond to lookup queries, and will implement all Phase 2 requirements of TRAPI KPs such as subclass inference, canonical edge directions, and others as described in the TranslatorArchitecture document.
+* Retriever will also provide API access to external resources.
 * The detailed implementation of Retriever is outside the scope of this document.
 * Translator will coordinate knowledge ingests to reduce redundancy and modeling variation.
 * Translator will move towards a common declarative ingest pipeline.
