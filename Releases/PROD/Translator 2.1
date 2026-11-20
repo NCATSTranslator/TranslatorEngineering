@@ -1,0 +1,29 @@
+Translator 2.1 has moved to PROD. 
+
+Please validate your components by:
+
+Running manual tests in PROD
+Checking logs for errors or unexpected behavior
+Performing any additional tests you would normally run
+Please add comments directly to this PR with any issues that need attention.
+
+Components to Validate:
+
+Eric: arax
+Everaldo: es-core-components (with Will), es-pending-api
+Gaurav: name-lookup
+Mark: ars
+Max:
+gandalf-gandalf, gandalf-queue, gandalf-worker
+shepherd-aragorn, shepherd-aragorn-lookup, shepherd-aragorn-omnicorp, shepherd-aragorn-pathfinder, shepherd-aragorn-score
+shepherd-arax, shepherd-arax-rank
+shepherd-broker, shepherd-bte, shepherd-bte-lookup, shepherd-db
+shepherd-filter-analyses-top-n, shepherd-filter-kgraph-orphans, shepherd-filter-results-top-n
+shepherd-finish-query, shepherd-merge-message, shepherd-monitor
+shepherd-score-paths, shepherd-server, shepherd-sipr, shepherd-sort-results-score
+Will: es-core-components (with Everaldo), nodenormalizationAPI, es-tier1, biothings-annotator
+Willow: retriever
+Everyone: Validate that the graph data is working as expected with your components.
+Bottom line:
+
+Your approval means you've actually tested your components in PROD. If something isn't right, please comment and document with a ticket in the Feedback Repo. 
